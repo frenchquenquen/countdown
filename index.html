@@ -129,7 +129,8 @@ function updateSignals() {
   });
 }
 function update() {
-  const diff = target - Date.now();
+  const testReveal = new URLSearchParams(window.location.search).get('test') === 'reveal';
+  const diff = testReveal ? 0 : target - Date.now();
   if (diff <= 0) {
     for (const id of ['days', 'hours', 'minutes', 'seconds']) document.getElementById(id).textContent = '00';
     const page = document.getElementById('page');
