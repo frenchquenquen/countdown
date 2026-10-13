@@ -55,7 +55,7 @@ main.complete .signal{opacity:1}
       <button class="signal" type="button" style="--x:21%;--y:8%" aria-label="Étoile 10 : découvrir un message"></button>
     </div>
   </div>
-  <div class="timer" role="timer" aria-label="Compte à rebours jusqu’au 17 octobre à midi">
+  <div class="timer" role="timer" aria-label="Compte à rebours jusqu’au 17 octobre à 18 h">
     <div class="unit"><span class="number" id="days">00</span><span class="label">Jours</span></div>
     <div class="unit"><span class="number" id="hours">00</span><span class="label">Heures</span></div>
     <div class="unit"><span class="number" id="minutes">00</span><span class="label">Minutes</span></div>
@@ -67,7 +67,7 @@ main.complete .signal{opacity:1}
   <p id="message-text"></p>
 </dialog>
 <script>
-const target = new Date('2026-10-17T12:00:00+02:00').getTime();
+const target = new Date('2026-10-17T18:00:00+02:00').getTime();
 const startDayUtc = Date.UTC(2026, 9, 7);
 const pad = n => String(n).padStart(2, '0');
 function parisDayUtc() {
